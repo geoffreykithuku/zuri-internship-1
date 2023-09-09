@@ -44,7 +44,7 @@ app.get("/api", (req, res) => {
   };
 
   // Send the JSON response
-  res.status(200).res.json(jsonResponse);
+  res.status(200).json(jsonResponse);
 });
 
 // Start the server
