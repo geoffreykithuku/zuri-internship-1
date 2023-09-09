@@ -6,6 +6,7 @@ const port = process.env.PORT || 3000;
 
 // Middleware to parse query parameters
 app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 
 // Define your endpoint
 app.get("/api", (req, res) => {
@@ -22,9 +23,9 @@ app.get("/api", (req, res) => {
     "Friday",
     "Saturday",
   ];
-    const currentDay = daysOfWeek[new Date().getDay()];
-    
-    // Get the current UTC time
+  const currentDay = daysOfWeek[new Date().getDay()];
+
+  // Get the current UTC time
   const now = new Date();
   const utcTime = new Date(
     now.getTime() + now.getTimezoneOffset() * 60000
@@ -36,7 +37,8 @@ app.get("/api", (req, res) => {
     current_day: currentDay,
     utc_time: utcTime,
     track,
-    github_file_url: "",
+    github_file_url:
+      "https://github.com/geoffreykithuku/zuri-internship-1/blob/main/index.js",
     github_repo_url: "https://github.com/geoffreykithuku/zuri-internship-1",
     status_code: 200,
   };
