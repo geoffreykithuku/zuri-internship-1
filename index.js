@@ -27,9 +27,9 @@ app.get("/api", (req, res) => {
 
   // Get the current UTC time
   const now = new Date();
-  const utcTime = new Date(
-    now.getTime() + now.getTimezoneOffset() * 60000
-  ).toISOString();
+  const utcTime = new Date(now.getTime() + now.getTimezoneOffset() * 60000)
+    .toISOString()
+    .replace(/\.\d{3}Z$/, "Z");
 
   // JSON response
   const jsonResponse = {
