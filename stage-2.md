@@ -32,6 +32,10 @@ Before you begin, ensure you have met the following requirements:
    ```
 4. Open http://localhost:3000 in your browser to view the API.
 
+## UML Diagram
+
+![UML Diagram](./uml-stage-2.png)
+
 ## Usage
 
 ### Create a Person
